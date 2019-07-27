@@ -1,0 +1,13 @@
+version: '2'
+
+
+#production environment
+services:
+  backapi:
+    image: registry.gitlab.com/discovery_switzerland/api/production
+    ports:
+     - "1000:1000"
+    restart: always
+    environment:
+     - NODE_ENV=production
+#    network_mode: host
